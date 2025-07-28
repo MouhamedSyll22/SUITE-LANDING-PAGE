@@ -38,7 +38,7 @@ Les utilisateurs doivent pouvoir :
 ### Liens
 
 - Code source : [https://github.com/MouhamedSyll22/SUITE-LANDING-PAGE](https://github.com/MouhamedSyll22/SUITE-LANDING-PAGE)
-- Site en ligne : [http://127.0.0.1:5500/starter-code/index.html](http://127.0.0.1:5500/starter-code/index.html)
+- Site en ligne : [ https://mouhamedsyll22.github.io/SUITE-LANDING-PAGE/]( https://mouhamedsyll22.github.io/SUITE-LANDING-PAGE/)
 
 ## Mon processus
 
