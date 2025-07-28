@@ -1,0 +1,557 @@
+@charset "UTF-8";
+
+/* ========== VARIABLES GLOBALES ========== */
+:root {
+  --clr-primary: #172339;
+  --clr-accent: #a060ff;
+  --clr-bg: #f3ede7;
+  --clr-white: #ffffff;
+  --clr-dark: #1c1e21;
+--color-neutral-900: #172339;
+  --ff-main: 'Epilogue', sans-serif;
+--spacing-1000: 80px;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --colors-neutral-500: #49566D;
+  --spacing-250: 20px;
+  --spacing-400: 32px;
+ --coner-radius-6: 6px;
+  --spacing-200: 16px;
+  --spacing-800: 64px;
+  --colors-eupatorium-purple-500: #CB30E3;
+}
+
+/* ========== RESET DE BASE ========== */
+
+body {
+  font-family: var(--ff-main);
+ background-color: #FAF8F6; /* ← couleur générale */
+  line-height: 1.6;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+/* ========== STRUCTURE PRINCIPALE ========== */
+header,
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== EN-TÊTE ========== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.logo {
+  width: 78.414px;
+height: 24.8px;
+}
+
+/* ========== BOUTONS ========== */
+.btn {
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn--outline {
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+  background-color: transparent;
+}
+
+.btn--outline:hover {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+.btn--solid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 2em;      /* Padding proportionnel */
+  font-size: clamp(0.85rem, 2vw, 1rem);         /* Même taille que .hero__content p */
+  width: fit-content;       /* Largeur selon le texte */
+  border-radius: var(--corner-radius-6, 6px);
+  background: var(--colors-neutral-900, #172339);
+  color: var(--clr-white);
+  margin-top: 1.5rem;       /* Espace sous le texte */
+}
+
+/* ========== SECTION HÉRO ========== */
+main {
+ padding: 1.5rem;
+  gap: var(--spacing-800, 64px); /* Espace entre les sections */
+}
+.hero {
+ position: relative;
+}
+
+.hero__content {
+    position: relative;
+  z-index: 2; /* Le texte passe devant */
+}
+
+.hero__content h1 {
+ color: var(--colors-neutral-900, #172339);
+font-feature-settings: 'liga' off, 'clig' off;
+/* text-preset-1 */
+font-family: Epilogue;
+font-size: clamp(1.5rem, 5vw, 4.5rem);
+font-weight: 400;
+line-height: 1.1; /* 79.2px */
+letter-spacing: -2.5px;
+}
+.pattern--curvedline1{
+  position: absolute;
+  margin-top: -2rem;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 235px;   /* Diminue la largeur, ajuste la largeurselon ton besoin */ 
+  z-index: 3; /* Plus grand que .hero__image */
+}
+ .hero__content h1 strong{
+color: var(--colors-neutral-900, #172339);
+font-feature-settings: 'liga' off, 'clig' off;
+/* text-preset-1(bold) */
+font-family: Epilogue;
+font-size: clamp(1.5rem, 5vw, 4.5rem);
+font-style: normal;
+font-weight: 700;
+line-height: 1.1;
+letter-spacing: 2px;
+}
+
+.hero__content p {
+color: var(--colors-neutral-500, #49566D);
+font-feature-settings: 'liga' off, 'clig' off;
+/* text-preset-5 */
+font-family: Epilogue;
+font-size: clamp(1rem, 2.5vw, 1.2rem);
+font-style: normal;
+font-weight: 400;
+line-height: 1.5; /* 28.8px */
+letter-spacing: 0.1px;
+}
+.btn--solid:hover {
+ background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  color: var(--clr-white);
+}
+
+/* Image du téléphone */
+.hero__image {
+   position: absolute;
+  top: -60px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* L'image passe derrière */
+  pointer-events: none; /* Pour ne pas gêner les clics */
+}
+
+.hero__image picture {
+ width: 350px;
+height: 600px;
+flex-shrink: 0;
+aspect-ratio: 7/12;
+}
+
+/* Statistiques */
+.hero__stats {
+ display: flex;
+justify-content: flex-end; /* Aligne les stats à droite */
+align-items: center;
+width: 190px;
+flex-direction: column;
+gap: var(--spacing-800, 64px);
+align-self: flex-end; /* Aligne le bloc à droite dans la colonne */
+margin-top: -15rem;    /* Espace au-dessus si besoin */
+justify-self: end;
+}
+
+.hero__stats div {
+  color: var(--colors-neutral-500, #49566D);
+font-feature-settings: 'liga' off, 'clig' off;
+/* text-preset-7 */
+font-family: Epilogue;
+font-size: clamp(0.8rem, 2vw, 1rem);
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 24px */
+letter-spacing: 2.5px;
+text-transform: uppercase;
+}
+
+.hero__stats strong {
+  color: var(--colors-neutral-900, #172339);
+font-size: clamp(1.2rem, 4vw, 2.2rem);
+}
+
+/* ========== SECTION TÉMOIGNAGE ========== */
+.testimonial {
+  position: relative;
+  display: flex;
+   justify-content: space-around;
+    margin: 10rem 0; /* Espace entre la section et les autres */
+  padding: 2rem 1rem; /* Espace interne */
+  gap: 2rem; /* Espace entre les colonnes */
+  align-items: center; /* important pour aligner l'image en bas */
+  background-color: #172339;
+  border-radius: 15px;
+  color: white;
+}
+
+/* === IMAGE GAUCHE === */
+.testimonial__image-col {
+  display: flex;
+  align-items: flex-end;   /* Aligne le contenu en bas */
+  justify-content: center;
+  min-width: 320px;
+}
+
+.testimonial__image {
+  position: relative;
+  width: 320px;   /* ou la largeur de ton image */
+  margin: 0 auto; /* centre le bloc dans sa colonne si besoin */
+}
+
+.pattern-blur {
+  position: absolute;
+  left: 50%;
+  bottom: 0; /* ou ajuste selon le rendu */
+  transform: translateX(-50%);
+  width: 600px;   /* ou la largeur souhaitée */
+  z-index: 1;
+}
+
+.testimonial__image picture img {
+  position: relative;
+  width: 320px;
+  height: auto;
+  z-index: 2;
+  margin-top: -60px; /* ← Valeur négative pour faire dépasser la tête */
+}
+
+/* === TEXTE DROITE === */
+.testimonial__content-col {
+  flex: 1;
+  max-width: 450px;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.testimonial__content-col h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.testimonial__content-col h2 strong {
+  font-weight: 700;
+}
+
+.testimonial__content-col p {
+  margin-top: 1rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.testimonial__author {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+
+/* ========== PIED DE PAGE ========== */
+.footer {
+  background: #F3EDE7;
+  padding: 20rem 6rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -400px; /* ← remonte visuellement sous le bloc bleu */
+}
+
+
+.footer__socials {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer__socials img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bordure autour de l'icône au focus */
+.footer__socials a:focus svg,
+.footer__socials a:focus-visible svg {
+  outline: none;
+  stroke: #172339;         /* Couleur de la bordure */
+  stroke-width: 1px;
+  border-radius: 20%;
+  box-shadow: 0 0 0 3px #17233933; /* halo autour */
+}
+
+/* Changement de couleur et opacité au hover */
+.footer__socials a:hover svg path {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* ----------- Tablette ----------- */
+ @media (max-width: 1024px) and (min-width: 768px) {
+   .btn--outline {
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    margin-right: 1rem; /* ajuste si besoin */
+  }
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+  }
+   .pattern--curvedline1 {
+    width: 160px;
+    margin-top: 1rem;
+    left: 35%;
+    transform: translateX(-60%);
+  }
+  .hero__content {
+    flex: 2 1 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .hero__content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .hero__content p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 1rem;
+  }
+  .hero__content a.btn--solid {
+    font-size: 0.8rem;
+    padding: 0.75rem 2rem;
+  }
+  .hero__image {
+    flex: 1 1 0;
+    margin-bottom: 0;
+    margin-left: 2rem; /* espace entre texte et image */
+    position: relative;
+    left: 220px;
+    top: -350px;
+    transform: none;
+    max-width: 350px;
+  }
+  .hero__stats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 0;           /* supprime la marge qui le descend */
+    width: 100%;
+    align-self: flex-start;  /* optionnel : force l'alignement en haut */
+    margin-top: -20rem; /* Ajuste la position verticale si nécessaire */
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    margin-top: 20rem;
+  }
+  .testimonial__image-col,
+  .testimonial__content-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .pattern-blur {
+    width: 400px; /* Ajuste la largeur du flou */
+    left: 50%;
+    bottom: -100px; /* Ajuste la position verticale */
+    transform: translateX(-50%);
+  }
+  .testimonial__image picture img {
+    width: 320px;
+    max-width: 100%;
+    margin-top: -250px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonial__content-col h2 {
+    font-size: 1.5rem;
+  } 
+  .testimonial__content-col p {
+    font-size: 1rem;
+  }
+  .testimonial__author {
+    font-size: 0.9rem;
+  }
+  .footer {
+    display: flex;
+     justify-content: space-between;
+  }
+} 
+
+/* ----------- Mobile ----------- */
+@media (max-width: 767px) {
+   .btn--outline {
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    margin-right: 1rem; /* ajuste si besoin */
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .hero__content {
+    margin-bottom: 2rem;
+    
+  }
+  .hero__content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .hero__content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+   .pattern--curvedline1 {
+    width: 100px;   /* Ajuste la valeur selon la taille souhaitée */
+    max-width: 100%;
+    margin-top: -1rem;
+    left: 61%;
+  }
+  .hero__content a.btn--solid {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+     margin-bottom: 2rem; /* Ajoute de l'espace sous le bouton */
+  }
+  .hero__image {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 220px;
+  }
+  .hero__stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+     margin-bottom: 2rem;
+      margin-bottom: 7rem;
+  }
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .testimonial__image-col,
+  .testimonial__content-col {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .pattern-blur {
+    width: 400px; /* Ajuste la largeur du flou */
+    left: 50%;
+    bottom: -100px; /* Ajuste la position verticale */
+    transform: translateX(-50%);
+  }
+  .testimonial__image picture img {
+    width: 180px;
+    max-width: 90vw;
+    margin-top: -120px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem; /* espace entre les éléments du footer */
+  }
+}
+
+/* ----------- Petits mobiles ----------- */
+@media (max-width: 480px) {
+  .hero__content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero__content p {
+    font-size: 1rem;
+  }
+  .testimonial__content-col h2 {
+    font-size: 1.2rem;
+  }
+  .testimonial__content-col p {
+    font-size: 0.9rem;
+  }
+}
+/* ========== ANIMATIONS ET TRANSITIONS ========== */
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.footer__socials a {
+  transition: transform 0.2s ease;
+}
+.footer__socials a:hover {
+  transform: scale(1.1);
+}
+
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}

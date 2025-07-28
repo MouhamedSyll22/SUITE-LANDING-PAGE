@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Suite landing page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="assets/logo.svg" alt="Suite logo" class="logo" />
+    <a href="#" class="btn btn--outline">Request Beta Access</a>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <img class="pattern--curvedline1" src="assets/pattern-curved-line-1.svg" alt="arc1" class="pattern pattern--top" aria-hidden="true" />
+        <h1>
+          A <strong class="hero__content">super solution</strong><br />
+          for your <strong class="hero__content">business.</strong>
+        </h1>
+        <p>
+          Our marketing and sales automations <br> help you scale your outreach to get <br> more leads for your company.
+        </p>
+        <a href="#" class="btn btn--solid">Request Beta Access</a>
+         <div class="hero__image">
+       
+        <picture>
+          <source srcset="assets/image-hero-landscape.webp 1x, assets/image-hero-landscape@2x.webp 2x" media="(max-width: 768px)" />
+          <source srcset="assets/image-hero-portrait.webp 1x, assets/image-hero-portrait@2x.webp 2x" />
+          <img src="assets/image-hero-portrait.webp" alt="Phone showing graph app" />
+        </picture>
+      </div>
+          <div class="hero__stats">
+        <div><strong>2K+</strong><br />Companies</div>
+        <div><strong>8</strong><br />Languages</div>
+        <div><strong>1.2M</strong><br />Leads</div>
+      </div>
+      </div>
+    </section>
+
+<section class="testimonial">
+  <div class="testimonial__image-col">
+    <div class="testimonial__image">
+      <img src="assets/pattern-blur.svg" alt="couleur violet derrière la personne" class="pattern-blur" aria-hidden="true">
+      <picture>
+        <source srcset="assets/image-jeremy-large.webp 1x, assets/image-jeremy-large@2x.webp 2x" media="(min-width: 768px)">
+        <source srcset="assets/image-jeremy-small.webp 1x, assets/image-jeremy-small@2x.webp 2x">
+        <img src="assets/image-jeremy-small.webp" alt="Jeremy Robinson">
+      </picture>
+    </div>
+  </div>
+
+  <div class="testimonial__quote-col">
+    <img src="assets/pattern-curved-line-2.svg" alt="arc2" class="pattern pattern--quote" aria-hidden="true" />
+  </div>
+
+  <div class="testimonial__content-col">
+    <h2>It just <strong>works.</strong></h2>
+    <p>
+      “I really like how it is an all-in-one <br> solution that handles many of the <br> tasks that you would normally <br> need separate tools to do the <br> same job. This thing is a miracle <br> worker.”
+    </p>
+    <p class="testimonial__author"><strong>Jeremy Robinson</strong><br />CMO, Fylo</p>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <img src="assets/logo.svg" alt="Suite logo" class="logo" />
+  <p>Copyright - Suite</p>
+   <div class="footer__socials">
+    <a href="#" aria-label="Facebook">
+      <!-- SVG Facebook intégré directement -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path d="M19.1029 0.599976H1.3112C0.701198 0.599976 0.207031 1.09414 0.207031 1.70414V19.4966C0.207031 20.1058 0.701198 20.6 1.3112 20.6H10.8904V12.855H8.2837V9.83664H10.8904V7.61081C10.8904 5.02748 12.4679 3.62081 14.7729 3.62081C15.877 3.62081 16.8254 3.70331 17.102 3.73998V6.43998L15.5037 6.44081C14.2504 6.44081 14.0079 7.03664 14.0079 7.90998V9.83748H16.997L16.6079 12.8558H14.0079V20.6H19.1045C19.7129 20.6 20.207 20.1058 20.207 19.4958V1.70414C20.207 1.09414 19.7129 0.599976 19.1029 0.599976Z" fill="#172339"/>
+      </svg>
+    </a>
+    <a href="#" aria-label="Twitter">
+      <!-- SVG Twitter intégré directement -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" fill="none">
+        <path d="M20.207 2.39743C19.4712 2.7241 18.6804 2.9441 17.8504 3.04327C18.6979 2.53577 19.3487 1.7316 19.6545 0.773267C18.862 1.24327 17.9837 1.58493 17.0487 1.7691C16.3012 0.9716 15.2337 0.473267 14.0537 0.473267C11.4045 0.473267 9.45786 2.94493 10.0562 5.51077C6.64703 5.33993 3.6237 3.7066 1.59953 1.2241C0.524531 3.06827 1.04203 5.48077 2.8687 6.70243C2.19703 6.68077 1.5637 6.4966 1.0112 6.1891C0.966198 8.08993 2.3287 9.86827 4.30203 10.2641C3.72453 10.4208 3.09203 10.4574 2.4487 10.3341C2.97036 11.9641 4.48536 13.1499 6.28203 13.1833C4.55703 14.5358 2.3837 15.1399 0.207031 14.8833C2.02286 16.0474 4.18036 16.7266 6.49703 16.7266C14.1154 16.7266 18.4195 10.2924 18.1595 4.5216C18.9612 3.94243 19.657 3.21993 20.207 2.39743Z" fill="#172339"/>
+      </svg>
+    </a>
+    <a href="#" aria-label="Instagram">
+      <!-- SVG Instagram intégré directement -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.207 0.599976C7.4912 0.599976 7.1512 0.611642 6.08453 0.659976C2.45286 0.826642 0.434531 2.84164 0.267865 6.47664C0.218698 7.54414 0.207031 7.88414 0.207031 10.6C0.207031 13.3158 0.218698 13.6566 0.267031 14.7233C0.433698 18.355 2.4487 20.3733 6.0837 20.54C7.1512 20.5883 7.4912 20.6 10.207 20.6C12.9229 20.6 13.2637 20.5883 14.3304 20.54C17.9587 20.3733 19.982 18.3583 20.1462 14.7233C20.1954 13.6566 20.207 13.3158 20.207 10.6C20.207 7.88414 20.1954 7.54414 20.147 6.47748C19.9837 2.84914 17.9662 0.827476 14.3312 0.660809C13.2637 0.611642 12.9229 0.599976 10.207 0.599976ZM10.207 2.40248C12.877 2.40248 13.1937 2.41248 14.2487 2.46081C16.9587 2.58414 18.2245 3.86998 18.3479 6.55998C18.3962 7.61414 18.4054 7.93081 18.4054 10.6008C18.4054 13.2716 18.3954 13.5875 18.3479 14.6416C18.2237 17.3291 16.9612 18.6175 14.2487 18.7408C13.1937 18.7891 12.8787 18.7991 10.207 18.7991C7.53703 18.7991 7.22036 18.7891 6.1662 18.7408C3.44953 18.6166 2.19036 17.325 2.06703 14.6408C2.0187 13.5866 2.0087 13.2708 2.0087 10.6C2.0087 7.92998 2.01953 7.61414 2.06703 6.55914C2.1912 3.86998 3.4537 2.58331 6.1662 2.45998C7.2212 2.41248 7.53703 2.40248 10.207 2.40248ZM5.07203 10.6C5.07203 7.76414 7.3712 5.46498 10.207 5.46498C13.042 5.46498 15.072 7.76414 15.072 10.6C15.072 13.4358 13.042 15.735 10.207 15.735C7.3712 15.735 5.07203 13.4358 5.07203 10.6ZM10.207 7.46498C9.53703 7.46498 9.07203 7.93
+498 9.07203 8.60081C9.07203 9.27164 9.53703 9.73664 10.207 9.73664C10.8768 9.73664 11.3418 9.27164 11.3418 8.60081C11.3418 7.93 10.8768 7.46498 10.207 7.46498ZM15.0723 6.60081C15.0723 7.27064 15.5373 7.73564 16.2071 7.73564C16.8771 7.73564 17.3421 7.27064 17.3421 6.60081C17.3421 5.93098 16.8771 5.46598 16.2071 5.46598C15.5373 5.46598 15.0723 5.93098 15.0723 6.60081Z" fill="#172339"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
