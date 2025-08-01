@@ -9,16 +9,11 @@
   --clr-dark: #1c1e21;
 --color-neutral-900: #172339;
   --ff-main: 'Epilogue', sans-serif;
---spacing-1000: 80px;
   --fw-regular: 400;
   --fw-bold: 700;
   --colors-neutral-500: #49566D;
-  --spacing-250: 20px;
-  --spacing-400: 32px;
- --coner-radius-6: 6px;
-  --spacing-200: 16px;
+ --corner-radius-6: 6px;
   --spacing-800: 64px;
-  --colors-eupatorium-purple-500: #CB30E3;
 }
 
 /* ========== RESET DE BASE ========== */
@@ -117,7 +112,7 @@ letter-spacing: -2.5px;
   margin-top: -2rem;
   left: 30%;
   transform: translateX(-50%);
-  width: 235px;   /* Diminue la largeur, ajuste la largeurselon ton besoin */ 
+  width: 235px;  /* Ajuste la valeur selon la taille souhaitée */
   z-index: 3; /* Plus grand que .hero__image */
 }
  .hero__content h1 strong{
@@ -140,7 +135,7 @@ font-family: Epilogue;
 font-size: clamp(1rem, 2.5vw, 1.2rem);
 font-style: normal;
 font-weight: 400;
-line-height: 1.5; /* 28.8px */
+line-height: 1.5;
 letter-spacing: 0.1px;
 }
 .btn--solid:hover {
@@ -221,15 +216,15 @@ font-size: clamp(1.2rem, 4vw, 2.2rem);
 .testimonial__image {
   position: relative;
   width: 320px;   /* ou la largeur de ton image */
-  margin: 0 auto; /* centre le bloc dans sa colonne si besoin */
+  margin: 0 auto; 
 }
 
 .pattern-blur {
   position: absolute;
   left: 50%;
-  bottom: 0; /* ou ajuste selon le rendu */
+  bottom: 0; 
   transform: translateX(-50%);
-  width: 600px;   /* ou la largeur souhaitée */
+  width: 600px;   
   z-index: 1;
 }
 
@@ -238,7 +233,7 @@ font-size: clamp(1.2rem, 4vw, 2.2rem);
   width: 320px;
   height: auto;
   z-index: 2;
-  margin-top: -60px; /* ← Valeur négative pour faire dépasser la tête */
+  margin-top: -60px; /* Valeur négative pour faire dépasser la tête */
 }
 
 /* === TEXTE DROITE === */
@@ -283,7 +278,7 @@ font-size: clamp(1.2rem, 4vw, 2.2rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -400px; /* ← remonte visuellement sous le bloc bleu */
+  margin-top: -400px; /* remonte visuellement sous le bloc bleu */
 }
 
 
@@ -375,7 +370,7 @@ font-size: clamp(1.2rem, 4vw, 2.2rem);
     gap: 5rem;
     margin-top: 0;           /* supprime la marge qui le descend */
     width: 100%;
-    align-self: flex-start;  /* optionnel : force l'alignement en haut */
+    align-self: flex-start;  /* force l'alignement en haut */
     margin-top: -20rem; /* Ajuste la position verticale si nécessaire */
   }
   

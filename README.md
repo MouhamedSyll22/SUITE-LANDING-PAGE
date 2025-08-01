@@ -22,8 +22,10 @@ Ceci est ma solution au défi [Suite landing page sur Frontend Mentor](https://w
 
 Les utilisateurs doivent pouvoir :
 
-- Voir la disposition optimale selon la taille de l’écran
-- Voir les états au survol des éléments interactifs
+- Visualiser la mise en page idéale selon la taille de l’écran (desktop, tablette, mobile)
+- Voir les effets au survol (hover) sur les éléments interactifs
+-Accéder à une interface propre et bien alignée
+
 
 ### Capture d’écran
 
@@ -48,21 +50,31 @@ Les utilisateurs doivent pouvoir :
 - CSS personnalisé avec variables
 - Flexbox
 - CSS Grid
+- clamp() pour les tailles de texte fluides
 - Responsive design avec media queries
-- Méthode mobile-first
+- Design mobile-first
+- Git et GitHub pour la gestion de version et la mise en ligne
 
 ### Ce que j’ai appris
 
-- J’ai compris l’importance de structurer correctement les sections principales, comme le **hero**, pour un affichage cohérent sur tous les formats.
-- J’ai appris à utiliser `clamp()` pour rendre les tailles de police plus adaptatives.
+- J’ai compris comment structurer une section **hero**,  de manière claire et responsive.
+- J’ai appris à Appliquer des tailles de texte adaptatives avec `clamp()` pour que les textes restent lisibles peu importe l’écran.
 - J’ai amélioré ma logique CSS pour gérer la disposition en **desktop**, **tablette** et **mobile** sans dupliquer les styles.
 - J’ai pratiqué l’alignement des contenus et images côte à côte, ainsi que la gestion des espacements.
-
+- Bien utiliser GitHub pour la publication
 #### Exemple de code :
 
 ```css
-.hero__stats {
+.btn--solid {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75em 2em;     /* Padding proportionnel */
+  font-size: clamp(0.85rem, 2vw, 1rem);   /* Même taille que .hero__content p */
+  width: fit-content;     /* Largeur selon le texte */
+  border-radius: var(--corner-radius-6, 6px);
+  background: var(--colors-neutral-900, #172339);
+  color: var(--clr-white);
+  margin-top: 1.5rem;     /* Espace sous le texte */
 }
+
